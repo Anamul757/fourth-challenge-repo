@@ -1,4 +1,4 @@
-// Problem-1
+
 function calculateTax(income, expense) {
   if (
     typeof income !== "number" ||
@@ -14,12 +14,18 @@ function calculateTax(income, expense) {
     return totalTax;
   }
 }
-// console.log(amount);
-// problem-2
-// function sendNotification(username, domainName){
-// if(username !== "string" || domainName !== string || ){}
-// }
-// problem-3
+
+
+function sendNotification(email) {
+  if (typeof email !== "string" || email.indexOf("@") === -1) {
+    return "Invalid Email";
+  }
+  const [username, domain] = email.split("@");
+  const message = username + " sent you an email from " + domain;
+  return message;
+}
+
+
 function checkDigitsInName(input) {
   if (typeof input !== "string") {
     return "Invalid Input";
@@ -33,7 +39,7 @@ function checkDigitsInName(input) {
   return "false";
 }
 
-// problem-4
+
 function calculateFinalScore(input) {
   if(typeof input !== "object" || typeof input.name !== "string" || typeof input.testScore !== "number" || typeof input.schoolGrade !== "number" || typeof input.isFFamily !== "boolean"){
     return "Invalid Input"
@@ -51,7 +57,8 @@ function calculateFinalScore(input) {
     }
   }
 }
-// problem-5
+
+
 function waitingTime(interviewTimes, serialNumber){
 if(!Array.isArray(interviewTimes) || typeof serialNumber !== "number"){
     return "Invalid Input";
